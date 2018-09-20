@@ -1,0 +1,30 @@
+<div style="text-align:center">
+  <div style="text-align:center">
+    <div style="text-align:center">
+      <h1>
+        {{ title }}
+      </h1>
+      <hr>
+      <table>
+        <tr>
+          <th>year</th>
+          <th>month</th>
+          <th>date</th>
+          <th>sum</th>
+          <th>count</th>
+          <th>avg</th>
+          <th>min</th>
+          <th>max</th>
+        </tr>
+        <tr *ngFor="let serie of series">
+          <td [innerHtml]="serie.f.year">year</td>
+          <td [innerHtml]="serie.f.month">month</td>
+          <td [innerHtml]="serie.f.day">date</td>
+          <td [innerHtml]="serie.sum">sum</td>
+          <td [innerHtml]="serie.count">count</td>
+          <td [innerHtml]="serie.avg">avg</td>
+          <td [innerHtml]="serie.min">min</td>
+          <td [innerHtml]="serie.max">max</td>
+        </tr>
+      </table>
+    </div>
